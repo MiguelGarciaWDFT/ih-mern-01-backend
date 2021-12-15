@@ -3,6 +3,10 @@ const mongoose = require("mongoose")
 
 //schema
 const storeSchema = mongoose.Schema({
+	nombre: {
+		type: String,
+		required: true
+	},
 	domicilio: {
 		type: String,
 		required: true

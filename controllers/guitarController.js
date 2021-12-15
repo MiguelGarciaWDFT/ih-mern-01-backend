@@ -1,6 +1,5 @@
 const Guitar =require("./../models/Guitar")
 
-
 exports.create = async(req,res) =>{
 
     //del formulario creamos variables y asignamos valores

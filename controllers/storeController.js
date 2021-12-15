@@ -2,11 +2,13 @@ const Store = require ("./../models/Store")
 
 exports.create= async(req,res)=>{
     const{
+        nombre,
         domicilio,
         telefono
     } = req.body
 try {
     const newStore = await Store.create({
+        nombre,
         domicilio,
         telefono
     })
@@ -22,6 +24,29 @@ try {
     
 }
 
+
+}
+
+exports.readAll = async (req, res) => {
+
+	try {
+		
+		const stores = await Store.find({})
+
+		res.json({
+			msg: "Tiendas encontradas.",
+			data: stores
+		})
+
+
+	} catch (error) {
+		
+		res.status(500).json({
+	 		msg: "Hubo un error al encontrar tiendas",
+			error: error
+		})
+
+	}
 
 }
 
@@ -42,4 +67,5 @@ exports.readOne = async(req,res)=>{
         
     }
 } //correcta
+
 
