@@ -116,7 +116,7 @@ exports.edit = async (req, res) => {
 			}, 
 			{new: true}
 		)
-
+console.log(updatedGuitar);
 		res.json({
 			msg: "Guitarra actualizada con éxito.",
 			data: updatedGuitar

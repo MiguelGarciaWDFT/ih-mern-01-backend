@@ -11,9 +11,7 @@ router.get("/readall", storeController.readAll)
 //crear una guitarra
 router.get("/readone/:id", storeController.readOne)
 //actualizar guitarra
-
+router.put("/edit/:id", storeController.edit)
 //borrar una guitarra
-
-
 
 module.exports = router
